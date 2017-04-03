@@ -2,7 +2,7 @@
 
 StaxWax is a light-weight convenience framework for high-performance StAX XML writing and parsing.
 
-View the [javadoc](https://ci.dhis2.org/job/staxwax-javadoc/javadoc/).
+View the [Javadoc](https://ci.dhis2.org/job/staxwax-javadoc/javadoc/).
 
 ## Reading XML
 
