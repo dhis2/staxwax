@@ -88,6 +88,9 @@ public class XMLFactory
         try
         {
             XMLInputFactory factory = new WstxInputFactory();
+
+            factory.setProperty( XMLInputFactory.SUPPORT_DTD, false );
+            factory.setProperty( XMLInputFactory.IS_SUPPORTING_EXTERNAL_ENTITIES, false );
         
             XMLStreamReader streamReader = factory.createXMLStreamReader( inputStream );
             
