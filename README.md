@@ -17,7 +17,7 @@ reader.getElementValue( "dataElement" );
 
 ## Writing XML
 
-To write XML, instantiate an XmlReader from an OutputStream.
+To write XML, instantiate an <pre>XmlWriter</pre> from an OutputStream.
 
 ```java
 XmlWriter writer = XmlFactory.getXmlWriter( outputStream );
