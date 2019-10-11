@@ -38,7 +38,7 @@ public class XMLException
     {
         super( message );
     }
-    
+
     public XMLException( String message, Throwable cause )
     {
         super( message, cause );

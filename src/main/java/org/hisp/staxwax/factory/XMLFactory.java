@@ -49,7 +49,7 @@ import com.ctc.wstx.stax.WstxOutputFactory;
  * This is a factory class which produces XMLWriter and XMLReader instances.
  * Woodstox is used as implementation classes for the underlying XMLOutputFactory
  * and XMLInputFactory interfaces.
- * 
+ *
  * @author Lars Helge Overland
  * @version $Id: XMLFactory.java 151 2009-10-28 15:33:31Z larshelg $
  */
@@ -57,7 +57,7 @@ public class XMLFactory
 {
     /**
      * Creates an XMLWriter from a StAX-based XMLStreamWriter.
-     * 
+     *
      * @param outputStream the OutputStream to write to.
      * @return an XMLWriter.
      */
@@ -66,7 +66,7 @@ public class XMLFactory
         try
         {
             XMLOutputFactory factory = new WstxOutputFactory();
-            
+
             XMLStreamWriter streamWriter = factory.createXMLStreamWriter( outputStream );
 
             return new DefaultXMLStreamWriter( streamWriter );
@@ -76,10 +76,10 @@ public class XMLFactory
             throw new RuntimeException( "Failed to create XMLWriter", ex );
         }
     }
-        
+
     /**
      * Creates an XMLReader from a StAX-based XMLStreamReader.
-     * 
+     *
      * @param inputStream the InputStream to read from.
      * @return an XMLReader.
      */
@@ -91,9 +91,9 @@ public class XMLFactory
 
             factory.setProperty( XMLInputFactory.SUPPORT_DTD, false );
             factory.setProperty( XMLInputFactory.IS_SUPPORTING_EXTERNAL_ENTITIES, false );
-        
+
             XMLStreamReader streamReader = factory.createXMLStreamReader( inputStream );
-            
+
             return new DefaultXMLStreamReader( streamReader );
         }
         catch ( XMLStreamException ex )
