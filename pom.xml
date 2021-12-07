@@ -6,7 +6,7 @@
   
   <groupId>org.hisp</groupId>
   <artifactId>staxwax</artifactId>
-  <version>1.4</version>
+  <version>1.5.0</version>
   <packaging>jar</packaging>
   <name>StAXWax</name>
   
@@ -22,7 +22,7 @@
   <developers>
     <developer>
       <name>Lars Helge Oeverland</name>
-      <email>larshelge@gmail.com</email>
+      <email>lars@dhis2.org</email>
       <organization>UiO</organization>
       <organizationUrl>http://www.uio.no/</organizationUrl>
     </developer>
@@ -47,15 +47,17 @@
   </issueManagement>
 
   <dependencies>
+    <!-- 
     <dependency>
       <groupId>stax</groupId>
       <artifactId>stax-api</artifactId>
       <version>1.0.1</version>
     </dependency>
+    -->
     <dependency>
       <groupId>com.fasterxml.woodstox</groupId>
       <artifactId>woodstox-core</artifactId>
-      <version>6.0.2</version>
+      <version>6.2.7</version>
     </dependency>
     <dependency>
       <groupId>commons-logging</groupId>
@@ -65,7 +67,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <version>4.13.2</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -84,15 +86,14 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <release>11</release>
           <encoding>UTF-8</encoding>
         </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
-        <version>3.1.0</version>
+        <version>3.2.1</version>
         <executions>
           <execution>
             <id>attach-sources</id>
@@ -105,7 +106,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.1.1</version>
+        <version>3.3.1</version>
         <executions>
           <execution>
             <id>attach-javadocs</id>
